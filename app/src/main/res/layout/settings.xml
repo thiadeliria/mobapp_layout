@@ -188,7 +188,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/notify_me"
-            android:
             android:checked="true" />
 
         <ImageView
