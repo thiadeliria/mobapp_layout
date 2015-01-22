@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgd_gradient_red"
+    android:orientation="vertical"
+    android:paddingTop="12dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/panel_1_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_user_ring" />
+
+        <TextView
+            android:id="@+id/panel_1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:text="账户"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:background="#ec371f"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp"
+        android:textColor="#f9f9f9"
+        android:textSize="15sp" >
+
+        <TextView
+            android:id="@+id/account"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="账号" />
+
+        <TextView
+            android:id="@+id/account_id"
+            style="@style/SettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/account"
+            android:layout_alignParentRight="true"
+            android:text="user0213" />
+
+        <ImageView
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/account"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/change_password"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:layout_marginBottom="6dp"
+            android:text="更改密码" />
+
+        <ImageView
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/change_password"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/keep_logged_in"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginBottom="6dp"
+            android:text="保持登录状态" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/keep_logged_in"
+            android:checked="true" />
+
+        <ImageView
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/keep_logged_in"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/add_phone"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider3"
+            android:layout_marginBottom="6dp"
+            android:text="连接服务器测试" />
+
+        <ImageView
+            android:id="@+id/divider0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/add_phone"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/phone"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider0"
+            android:text="清空数据" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/panel_2_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_notif_ring" />
+
+        <TextView
+            android:id="@+id/panel_2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:text="消息"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:background="#ec371f"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp"
+        android:textColor="#f9f9f9"
+        android:textSize="15sp" >
+
+        <TextView
+            android:id="@+id/notify_me"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="消息通知" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/notify_me"
+            android:checked="true" />
+
+        <ImageView
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/notify_me"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/vibrate"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider6"
+            android:layout_marginBottom="6dp"
+            android:text="振动" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/vibrate"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/panel_3_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_info_ring" />
+
+        <TextView
+            android:id="@+id/panel_3_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:text="关于"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ec371f"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp"
+        android:textColor="#f9f9f9"
+        android:textSize="15sp" >
+
+        <TextView
+            android:id="@+id/about_us"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="关于翼龙贷" />
+
+        <ImageView
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/about_us"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bgd_divider" />
+
+        <TextView
+            android:id="@+id/sign_out"
+            style="@style/SettingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider8"
+            android:layout_marginBottom="6dp"
+            android:text="退出" />
+    </RelativeLayout>
+
+</LinearLayout>
