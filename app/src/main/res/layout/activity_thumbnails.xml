@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2d2d2"
+    tools:context="com.stackbase.mobapp.activity.ThumbnailsActivity" >
+
+    <GridView
+        android:id="@+id/picturesGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+    <ImageView
+        android:id="@+id/bottomBanner"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bgd_gradient_black" />
+
+    <ImageButton
+        android:id="@+id/takepictureBtn"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_alignBottom="@+id/bottomBanner"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_camera" />
+
+</RelativeLayout>
