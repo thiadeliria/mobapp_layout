@@ -300,7 +300,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int use_picture=0x7f0a0005;
     }
     public static final class style {
-        public static final int ActionBarStyle=0x7f0b0002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -330,12 +329,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f0b0001;
-        public static final int ButtonBar=0x7f0b0004;
-        public static final int ButtonBarButton=0x7f0b0005;
-        public static final int FullscreenActionBarStyle=0x7f0b0008;
-        public static final int FullscreenTheme=0x7f0b0003;
-        public static final int SettingLabel=0x7f0b0006;
-        public static final int SettingText=0x7f0b0007;
+        public static final int ButtonBar=0x7f0b0003;
+        public static final int ButtonBarButton=0x7f0b0004;
+        public static final int FullscreenActionBarStyle=0x7f0b0007;
+        public static final int FullscreenTheme=0x7f0b0002;
+        public static final int SettingLabel=0x7f0b0005;
+        public static final int SettingText=0x7f0b0006;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;

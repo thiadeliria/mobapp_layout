@@ -34,15 +34,17 @@
       android:layout_weight="0"
       android:orientation="horizontal"
       android:gravity="center"
-      android:padding="4dip"
-      android:weightSum="1"
-      android:background="@color/help_button_view">
+      android:padding="4dp"
+      android:background="@drawable/bgd_gradient_black">
 
     <Button android:id="@+id/done_button"
-            android:layout_width="0dip"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Done"/>
+            android:padding="6dp"
+            android:textSize="21sp"
+            android:textColor="#ffffff"
+            android:background="#0000"
+            android:text="完成"/>
 
   </LinearLayout>
 

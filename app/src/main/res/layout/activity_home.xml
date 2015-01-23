@@ -44,19 +44,19 @@
 
     <ImageButton
         android:id="@+id/cameraBtn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/circle"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/ic_account_red" />
 
     <ImageButton
         android:id="@+id/manageBtn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/borrowersLabel"
-        android:layout_marginLeft="22dp"
+        android:layout_marginLeft="35dp"
         android:background="@drawable/ic_users_red" />
 
     <TextView
@@ -64,8 +64,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="94dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="14dp"
         android:layout_marginTop="4dp"
         android:text="@string/borrowers"
         android:textColor="#ffffff"
@@ -74,13 +74,13 @@
 
     <ImageButton
         android:id="@+id/settingsBtn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/settingsLabel"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="120dp"
-        android:layout_marginRight="22dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/icon_settings_red" />
 
     <TextView
@@ -89,8 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="94dp"
-        android:layout_marginRight="33dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="42.5dp"
         android:layout_marginTop="4dp"
         android:text="@string/settings"
         android:textColor="#ffffff"
