@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="16dp"
             android:layout_marginRight="9dp"
-            android:background="@drawable/stranger" />
+            android:background="@drawable/ic_stranger" />
 
         <ImageView
             android:id="@+id/nameText"
@@ -91,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="女" />
-        </RadioGroup>  -->
+        </RadioGroup>
+        -->
 
         <ImageView
             android:id="@+id/minzuText"
@@ -133,7 +134,7 @@
             android:hint=" 身份证"
             android:inputType="number"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/dobText"
@@ -154,7 +155,7 @@
             android:hint=" 出生日期"
             android:inputType="date"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/addText"
@@ -195,7 +196,7 @@
             android:hint=" 签发机关"
             android:inputType="text"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/expiryText"
@@ -216,31 +217,27 @@
             android:hint=" 有效期"
             android:inputType="date"
             android:textColorHint="#fffff9" />
-"
+"
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/r1"
-        android:layout_gravity="right"
-        android:background="@drawable/border"
-        android:orientation="vertical"
-        android:paddingTop="10dp" >
-
-        <TextView
-            android:id="@+id/idPicText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="身份证照片" />
+        android:layout_below="@+id/r1" >
 
         <ImageView
             android:id="@+id/frontView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/pic" />
+            android:layout_width="136dp"
+            android:layout_height="86dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_id_front" />
+
+        <ImageView
+            android:id="@+id/backView"
+            android:layout_width="136dp"
+            android:layout_height="86dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_id_back" />
     </RelativeLayout>
 
 </RelativeLayout>
