@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#d2d2d2"
+    android:background="@drawable/bgd_gradient_red"
     tools:context="com.stackbase.mobapp.activity.ThumbnailsActivity" >
 
     <GridView
@@ -29,8 +29,8 @@
 
     <ImageButton
         android:id="@+id/takepictureBtn"
-        android:layout_width="59dp"
-        android:layout_height="59dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_camera" />

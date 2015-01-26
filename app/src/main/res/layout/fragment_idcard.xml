@@ -9,7 +9,8 @@
         android:id="@+id/r1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" >
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" >
 
         <ImageView
             android:id="@+id/imageView"
@@ -91,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="女" />
-        </RadioGroup>
+        </RadioGroup>
         -->
 
         <ImageView
@@ -134,7 +135,7 @@
             android:hint=" 身份证"
             android:inputType="number"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/dobText"
@@ -155,7 +156,7 @@
             android:hint=" 出生日期"
             android:inputType="date"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/addText"
@@ -196,7 +197,7 @@
             android:hint=" 签发机关"
             android:inputType="text"
             android:textColorHint="#fffff9" />
-"
+"
 
         <ImageView
             android:id="@+id/expiryText"
@@ -217,8 +218,8 @@
             android:hint=" 有效期"
             android:inputType="date"
             android:textColorHint="#fffff9" />
-        
-        <TextView 
+
+        <TextView
             android:id="@+id/dash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -226,8 +227,10 @@
             android:layout_toRightOf="@+id/expiryEdit"
             android:paddingBottom="5dp"
             android:text=" - "
-            android:textSize="25sp"
-            android:textColor="#fffff9" />"
+            android:textColor="#fffff9"
+            android:textSize="25sp" />
+"
+
         <EditText
             android:id="@+id/expiryEdit2"
             android:layout_width="111dp"
@@ -238,13 +241,14 @@
             android:hint=" 有效期"
             android:inputType="date"
             android:textColorHint="#fffff9" />
-"
+"
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/r1" >
+        android:layout_below="@+id/r1"
+        android:layout_marginTop="10dp" >
 
         <ImageView
             android:id="@+id/frontView"

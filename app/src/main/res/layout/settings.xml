@@ -258,7 +258,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="9dp"
-            android:text="关于翼龙贷" />
+            android:text="关于翼龙贷                                         >" />
 
         <ImageView
             android:id="@+id/divider8"
