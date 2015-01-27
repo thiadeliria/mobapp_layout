@@ -5,11 +5,27 @@
     android:background="@drawable/bgd_gradient_red"
     tools:context="com.stackbase.mobapp.activity.ThumbnailsActivity" >
 
+    <ImageView
+        android:id="@+id/topBanner"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bgd_gradient_black" />
+
+    <ImageButton
+        android:id="@+id/takepictureBtn"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_camera" />
+
     <GridView
         android:id="@+id/picturesGridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomBanner"
+        android:layout_below="@+id/topBanner"
         android:layout_margin="5dp"
         android:columnWidth="100dp"
         android:drawSelectorOnTop="true"
@@ -19,20 +35,5 @@
         android:stretchMode="columnWidth"
         android:verticalSpacing="5dp" >
     </GridView>
-
-    <ImageView
-        android:id="@+id/bottomBanner"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bgd_gradient_black" />
-
-    <ImageButton
-        android:id="@+id/takepictureBtn"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_camera" />
 
 </RelativeLayout>

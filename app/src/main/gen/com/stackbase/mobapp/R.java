@@ -178,7 +178,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int album_folder_3=0x7f090048;
         public static final int backView=0x7f090043;
         public static final int borrowersLabel=0x7f090016;
-        public static final int bottomBanner=0x7f09001a;
         public static final int cameraBtn=0x7f090014;
         public static final int camera_button_view=0x7f09000d;
         public static final int change_password=0x7f090057;
@@ -246,7 +245,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int pictureConfirmImageView=0x7f09000b;
         public static final int pictureImageView=0x7f09006b;
         public static final int pictureTexView=0x7f09006c;
-        public static final int picturesGridView=0x7f090019;
+        public static final int picturesGridView=0x7f09001b;
         public static final int preview_view=0x7f09000c;
         public static final int ptypeName=0x7f09004f;
         public static final int ptypeSpinner=0x7f090050;
@@ -272,8 +271,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int settingsLabel=0x7f090018;
         public static final int shutter_button=0x7f09000e;
         public static final int sign_out=0x7f09006a;
-        public static final int takepictureBtn=0x7f09001b;
+        public static final int takepictureBtn=0x7f09001a;
         public static final int textView9=0x7f09004a;
+        public static final int topBanner=0x7f090019;
         public static final int userinfoLabel=0x7f090013;
         public static final int vibrate=0x7f090064;
     }
