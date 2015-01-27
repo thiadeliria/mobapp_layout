@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgd_gradient_red"
-    android:padding="21dp" >
+    android:background="@drawable/bgd_gradient_red" >
 
     <RelativeLayout
-        android:id="@+id/r1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp" >
+        android:padding="21dp" >
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="110dp"
-            android:layout_height="116dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="9dp"
-            android:background="@drawable/ic_stranger" />
-
-        <ImageView
-            android:id="@+id/nameText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/imageView"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_user" />
-
-        <EditText
-            android:id="@+id/nameEdit"
-            android:layout_width="156dp"
-            android:layout_height="35dp"
-            android:layout_toRightOf="@+id/nameText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 姓名"
-            android:inputType="textPersonName"
-            android:textColorHint="#fffff9" />
-
-        <RadioGroup
-            android:id="@+id/genderRadio"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nameText"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/imageView"
-            android:orientation="horizontal"
-            android:paddingRight="10dp" >
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
 
-            <RadioButton
-                android:id="@+id/maleButton"
-                android:layout_width="63dp"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="110dp"
+                android:layout_height="116dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/ic_stranger" />
+
+            <ImageView
+                android:id="@+id/nameText"
+                android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginRight="10dp"
-                android:checked="true"
-                android:inputType="text"
-                android:text=" 男"
-                android:textColor="#fffff9" />
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_user" />
 
-            <RadioButton
-                android:id="@+id/femaleButton"
-                android:layout_width="68dp"
+            <EditText
+                android:id="@+id/nameEdit"
+                android:layout_width="156dp"
                 android:layout_height="35dp"
-                android:text=" 女"
-                android:textColor="#fffff9" />
-        </RadioGroup>
+                android:layout_toRightOf="@+id/nameText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 姓名"
+                android:inputType="textPersonName"
+                android:textColorHint="#fffff9" />
 
-        <!--
+            <RadioGroup
+                android:id="@+id/genderRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameText"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:orientation="horizontal"
+                android:paddingRight="10dp" >
+
+                <RadioButton
+                    android:id="@+id/maleButton"
+                    android:layout_width="63dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:checked="true"
+                    android:inputType="text"
+                    android:text=" 男"
+                    android:textColor="#fffff9" />
+
+                <RadioButton
+                    android:id="@+id/femaleButton"
+                    android:layout_width="68dp"
+                    android:layout_height="35dp"
+                    android:text=" 女"
+                    android:textColor="#fffff9" />
+            </RadioGroup>
+
+            <!--
              <RadioGroup
             android:id="@+id/genderRadio"
             android:layout_width="wrap_content"
@@ -92,177 +96,175 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="女" />
-        </RadioGroup>
-        -->
+        </RadioGroup>
+            -->
 
-        <ImageView
-            android:id="@+id/minzuText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/genderRadio"
-            android:layout_marginBottom="9dp"
-            android:layout_toRightOf="@+id/imageView"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_minzu" />
+            <ImageView
+                android:id="@+id/minzuText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/genderRadio"
+                android:layout_marginBottom="9dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_minzu" />
 
-        <EditText
-            android:id="@+id/minzuEdit"
-            android:layout_width="156dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/minzuText"
-            android:layout_toRightOf="@+id/minzuText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 民族"
-            android:inputType="text"
-            android:textColorHint="#fffff9" />
+            <EditText
+                android:id="@+id/minzuEdit"
+                android:layout_width="156dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/minzuText"
+                android:layout_toRightOf="@+id/minzuText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 民族"
+                android:inputType="text"
+                android:textColorHint="#fffff9" />
 
-        <ImageView
-            android:id="@+id/idText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/minzuText"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_number" />
+            <ImageView
+                android:id="@+id/idText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/minzuText"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_number" />
 
-        <EditText
-            android:id="@+id/idEdit"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/idText"
-            android:layout_toRightOf="@+id/idText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 身份证"
-            android:inputType="number"
-            android:textColorHint="#fffff9" />
-"
+            <EditText
+                android:id="@+id/idEdit"
+                android:layout_width="246dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/idText"
+                android:layout_toRightOf="@+id/idText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 身份证"
+                android:inputType="number"
+                android:textColorHint="#fffff9" />
 
-        <ImageView
-            android:id="@+id/dobText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/idText"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_bday" />
+            <ImageView
+                android:id="@+id/dobText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/idText"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_bday" />
 
-        <EditText
-            android:id="@+id/dobEdit"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/dobText"
-            android:layout_toRightOf="@+id/dobText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 出生日期"
-            android:inputType="date"
-            android:textColorHint="#fffff9" />
-"
+            <EditText
+                android:id="@+id/dobEdit"
+                android:layout_width="246dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/dobText"
+                android:layout_toRightOf="@+id/dobText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 出生日期"
+                android:inputType="date"
+                android:textColorHint="#fffff9" />
 
-        <ImageView
-            android:id="@+id/addText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/dobText"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_address" />
+            <ImageView
+                android:id="@+id/addText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dobText"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_address" />
 
-        <EditText
-            android:id="@+id/addEdit"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/addText"
-            android:layout_toRightOf="@+id/addText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 住址"
-            android:inputType="textPostalAddress"
-            android:textColorHint="#fffff9" />
+            <EditText
+                android:id="@+id/addEdit"
+                android:layout_width="246dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/addText"
+                android:layout_toRightOf="@+id/addText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 住址"
+                android:inputType="textPostalAddress"
+                android:textColorHint="#fffff9" />
 
-        <ImageView
-            android:id="@+id/locationText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/addText"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_location" />
+            <ImageView
+                android:id="@+id/locationText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/addText"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_location" />
 
-        <EditText
-            android:id="@+id/locationEdit"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/locationText"
-            android:layout_toRightOf="@+id/locationText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 签发机关"
-            android:inputType="text"
-            android:textColorHint="#fffff9" />
-"
+            <EditText
+                android:id="@+id/locationEdit"
+                android:layout_width="246dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/locationText"
+                android:layout_toRightOf="@+id/locationText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 签发机关"
+                android:inputType="text"
+                android:textColorHint="#fffff9" />
 
-        <ImageView
-            android:id="@+id/expiryText"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/locationText"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/labelicon_red"
-            android:src="@drawable/ic_validity" />
+            <ImageView
+                android:id="@+id/expiryText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/locationText"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/labelicon_red"
+                android:src="@drawable/ic_validity" />
 
-        <EditText
-            android:id="@+id/expiryEdit"
-            android:layout_width="111dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/expiryText"
-            android:layout_toRightOf="@+id/expiryText"
-            android:background="@drawable/edittext_red"
-            android:hint=" 有效期"
-            android:inputType="date"
-            android:textColorHint="#fffff9" />
+            <EditText
+                android:id="@+id/expiryEdit"
+                android:layout_width="109dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/expiryText"
+                android:layout_toRightOf="@+id/expiryText"
+                android:background="@drawable/edittext_red"
+                android:hint=" 有效期"
+                android:inputType="date"
+                android:textColorHint="#fffff9" />
 
-        <TextView
-            android:id="@+id/dash"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/expiryText"
+                android:layout_toRightOf="@+id/expiryEdit"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text=" - "
+                android:textColor="#fffff9"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/expiryEdit2"
+                android:layout_width="109dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@+id/expiryText"
+                android:layout_toRightOf="@+id/dash"
+                android:background="@drawable/edittext_red"
+                android:hint=" 有效期"
+                android:inputType="date"
+                android:textColorHint="#fffff9" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/expiryText"
-            android:layout_toRightOf="@+id/expiryEdit"
-            android:paddingBottom="5dp"
-            android:text=" - "
-            android:textColor="#fffff9"
-            android:textSize="25sp" />
-"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_marginTop="10dp" >
 
-        <EditText
-            android:id="@+id/expiryEdit2"
-            android:layout_width="111dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@+id/expiryText"
-            android:layout_toRightOf="@+id/dash"
-            android:background="@drawable/edittext_red"
-            android:hint=" 有效期"
-            android:inputType="date"
-            android:textColorHint="#fffff9" />
-"
+            <ImageView
+                android:id="@+id/frontView"
+                android:layout_width="136dp"
+                android:layout_height="86dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ic_id_front" />
+
+            <ImageView
+                android:id="@+id/backView"
+                android:layout_width="136dp"
+                android:layout_height="86dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_id_back" />
+        </RelativeLayout>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/r1"
-        android:layout_marginTop="10dp" >
-
-        <ImageView
-            android:id="@+id/frontView"
-            android:layout_width="136dp"
-            android:layout_height="86dp"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/ic_id_front" />
-
-        <ImageView
-            android:id="@+id/backView"
-            android:layout_width="136dp"
-            android:layout_height="86dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_id_back" />
-    </RelativeLayout>
-
-</RelativeLayout>
+</ScrollView>

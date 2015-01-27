@@ -251,7 +251,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ptypeName=0x7f09004f;
         public static final int ptypeSpinner=0x7f090050;
         public static final int quit=0x7f090009;
-        public static final int r1=0x7f09002d;
         public static final int rec_student_1=0x7f09001d;
         public static final int rec_student_1_info=0x7f09001f;
         public static final int rec_student_1_name=0x7f09001e;
@@ -265,6 +264,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int rec_student_4_info=0x7f09002b;
         public static final int rec_student_4_name=0x7f09002a;
         public static final int recaptureTextView=0x7f09000f;
+        public static final int relativeLayout1=0x7f09002d;
         public static final int restart_preview=0x7f09000a;
         public static final int savePictureTextView=0x7f090010;
         public static final int selectPictureTypeDialog=0x7f09004e;
