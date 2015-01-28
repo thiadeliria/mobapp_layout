@@ -4,30 +4,18 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bgd_gradient_red" >
 
-    <!-- <ImageView -->
-    <!-- android:layout_width="match_parent" -->
-    <!-- android:layout_height="wrap_content" -->
-    <!-- android:id="@+id/imageView" -->
-    <!-- android:background="@drawable/eloancn_logo" -->
-    <!-- android:cropToPadding="false" -->
-    <!-- android:adjustViewBounds="true" /> -->
-
     <ImageView
         android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
+        android:layout_centerInParent="true"
         android:src="@drawable/vector_dottedcircle" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="180dp"
+        android:layout_centerInParent="true"
         android:src="@drawable/logo" />
 
     <TextView
@@ -46,27 +34,26 @@
         android:id="@+id/cameraBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/circle"
+        android:layout_above="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/ic_account_red" />
 
     <ImageButton
         android:id="@+id/manageBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/borrowersLabel"
-        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/logo"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="55dp"
         android:background="@drawable/ic_users_red" />
 
     <TextView
         android:id="@+id/borrowersLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="4dp"
+        android:layout_below="@+id/manageBtn"
+        android:layout_marginLeft="35dp"
         android:text="@string/borrowers"
         android:textColor="#ffffff"
         android:textSize="17sp"
@@ -76,22 +63,20 @@
         android:id="@+id/settingsBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/settingsLabel"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="130dp"
-        android:layout_marginRight="35dp"
+        android:layout_below="@+id/logo"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="55dp"
         android:background="@drawable/icon_settings_red" />
 
     <TextView
         android:id="@+id/settingsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_below="@+id/settingsBtn"
         android:layout_marginBottom="100dp"
-        android:layout_marginRight="42.5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginRight="63dp"
         android:text="@string/settings"
         android:textColor="#ffffff"
         android:textSize="17sp"

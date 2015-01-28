@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:background="#de3a24"
+        android:background="#a92311"
         android:paddingBottom="7dp"
         android:paddingLeft="14dp"
         android:paddingRight="14dp"
@@ -166,7 +166,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:background="#de3a24"
+        android:background="#a92311"
         android:paddingBottom="7dp"
         android:paddingLeft="14dp"
         android:paddingRight="14dp"
@@ -244,7 +244,7 @@
         android:id="@+id/panel_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#de3a24"
+        android:background="#9d1f0e"
         android:paddingBottom="7dp"
         android:paddingLeft="14dp"
         android:paddingRight="14dp"
@@ -258,7 +258,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="9dp"
-            android:text="关于翼龙贷                                         >" />
+            android:text="关于翼龙贷" />
+        
+        <Button
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:textColor="#f9f9f9"
+            android:textStyle="bold"
+            android:text=">" />
 
         <ImageView
             android:id="@+id/divider8"

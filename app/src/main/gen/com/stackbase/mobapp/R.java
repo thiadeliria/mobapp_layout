@@ -110,8 +110,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int bg=0x7f020006;
         public static final int bgd_divider=0x7f020007;
         public static final int bgd_gradient_black=0x7f020008;
-        public static final int bgd_gradient_lightred=0x7f020009;
-        public static final int bgd_gradient_red=0x7f02000a;
+        public static final int bgd_gradient_red=0x7f020009;
+        public static final int bgd_gradient_white=0x7f02000a;
         public static final int border=0x7f02000b;
         public static final int border_white=0x7f02000c;
         public static final int borrowers=0x7f02000d;
@@ -169,13 +169,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int about_us=0x7f090068;
         public static final int account=0x7f090054;
         public static final int account_id=0x7f090055;
-        public static final int action_settings=0x7f09006d;
+        public static final int action_settings=0x7f09006e;
         public static final int addEdit=0x7f09003b;
         public static final int addText=0x7f09003a;
         public static final int add_phone=0x7f09005c;
         public static final int album_folder_1=0x7f090044;
         public static final int album_folder_2=0x7f090046;
         public static final int album_folder_3=0x7f090048;
+        public static final int arrow=0x7f090069;
         public static final int backView=0x7f090043;
         public static final int borrowersLabel=0x7f090016;
         public static final int cameraBtn=0x7f090014;
@@ -197,7 +198,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int divider2=0x7f090058;
         public static final int divider3=0x7f09005b;
         public static final int divider6=0x7f090063;
-        public static final int divider8=0x7f090069;
+        public static final int divider8=0x7f09006a;
         public static final int dobEdit=0x7f090039;
         public static final int dobText=0x7f090038;
         public static final int done_button=0x7f09004d;
@@ -243,8 +244,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int parent_layout=0x7f090051;
         public static final int phone=0x7f09005e;
         public static final int pictureConfirmImageView=0x7f09000b;
-        public static final int pictureImageView=0x7f09006b;
-        public static final int pictureTexView=0x7f09006c;
+        public static final int pictureImageView=0x7f09006c;
+        public static final int pictureTexView=0x7f09006d;
         public static final int picturesGridView=0x7f09001b;
         public static final int preview_view=0x7f09000c;
         public static final int ptypeName=0x7f09004f;
@@ -270,7 +271,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int settingsBtn=0x7f090017;
         public static final int settingsLabel=0x7f090018;
         public static final int shutter_button=0x7f09000e;
-        public static final int sign_out=0x7f09006a;
+        public static final int sign_out=0x7f09006b;
         public static final int takepictureBtn=0x7f09001a;
         public static final int textView9=0x7f09004a;
         public static final int topBanner=0x7f090019;
