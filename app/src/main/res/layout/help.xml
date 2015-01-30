@@ -43,7 +43,7 @@
             android:padding="6dp"
             android:textSize="21sp"
             android:textColor="#ffffff"
-            android:background="#0000"
+            android:background="@android:color/transparent"
             android:text="完成"/>
 
   </LinearLayout>

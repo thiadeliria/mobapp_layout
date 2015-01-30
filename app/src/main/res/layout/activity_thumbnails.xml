@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/bgd_gradient_red"
     tools:context="com.stackbase.mobapp.activity.ThumbnailsActivity" >
 
@@ -16,8 +16,8 @@
         android:id="@+id/takepictureBtn"
         android:layout_width="49dp"
         android:layout_height="49dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
         android:background="@drawable/ic_camera" />
 
@@ -26,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/topBanner"
-        android:layout_margin="5dp"
         android:columnWidth="100dp"
         android:drawSelectorOnTop="true"
         android:gravity="center"
