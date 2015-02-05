@@ -4,14 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.content.res.Configuration;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -23,8 +19,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.stackbase.mobapp.R;
 import com.stackbase.mobapp.camera.BeepManager;
@@ -33,7 +27,6 @@ import com.stackbase.mobapp.utils.Constant;
 import com.stackbase.mobapp.utils.Helper;
 import com.stackbase.mobapp.view.ShutterButton;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -47,7 +40,7 @@ import java.util.Date;
  * The code for this class was adapted from the ZXing project: http://code.google.com/p/zxing/
  */
 public final class CaptureActivity extends Activity implements SurfaceHolder.Callback,
-        ShutterButton.OnShutterButtonListener, Camera.PictureCallback, View.OnClickListener {
+        ShutterButton.OnShutterButtonListener, Camera.PictureCallback {
 
     private static final String TAG = CaptureActivity.class.getSimpleName();
     // Context menu
@@ -66,9 +59,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private boolean isPaused;
     private OnSharedPreferenceChangeListener listener;
     private FinishListener finishListener;
-    private TextView savePictureTextView;
-    private TextView recaptureTextView;
-    private ImageView pictureConfirmImageView;
 
     public FinishListener getFinishListener() {
         return finishListener;
@@ -100,11 +90,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         shutterButton = (ShutterButton) findViewById(R.id.shutter_button);
         shutterButton.setOnShutterButtonListener(this);
 
-        savePictureTextView = (TextView) findViewById(R.id.savePictureTextView);
-        recaptureTextView = (TextView) findViewById(R.id.recaptureTextView);
-
-        savePictureTextView.setOnClickListener(this);
-        recaptureTextView.setOnClickListener(this);
         cameraManager = new CameraManager(getApplication());
 
         finishListener = new FinishListener(this);
@@ -119,7 +104,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         retrievePreferences();
 
         // Set up the camera preview surface.
-        surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+        surfaceView = (SurfaceView) findViewById(R.id.capture_preview_view);
         surfaceHolder = surfaceView.getHolder();
         if (!hasSurface) {
             surfaceHolder.addCallback(this);
@@ -131,15 +116,15 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
      * Called when the shutter button is pressed in continuous mode.
      */
     void onShutterButtonPress() {
+        Log.d(TAG, "onShutterButtonPress");
+//        handler.stop();
         isPaused = true;
-        handler.stop();
+        cameraManager.takePicture(this);
         beepManager.playBeepSoundAndVibrate();
 
-        savePictureTextView.setVisibility(View.VISIBLE);
-        recaptureTextView.setVisibility(View.VISIBLE);
         shutterButton.setVisibility(View.GONE);
 
-        cameraManager.takePicture(this);
+        Log.d(TAG, "onShutterButtonPress finished");
     }
 
     @Override
@@ -177,13 +162,13 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         } catch (IOException ioe) {
             Log.e(TAG, "Fail to open camera driver", ioe);
             Helper.showErrorMessage(this, "错误", "不能打开照相机设备, 请重启您的手机或检查权限设置.",
-                    finishListener, finishListener);
+                    null, finishListener);
         } catch (RuntimeException e) {
             Log.e(TAG, "Fail to open camera driver", e);
             // Barcode Scanner has seen crashes in the wild of this variety:
             // java.?lang.?RuntimeException: Fail to connect to camera service
             Helper.showErrorMessage(this, "错误", "不能打开照相机设备, 请重启您的手机或检查权限设置.",
-                    finishListener, finishListener);
+                    null, finishListener);
         }
     }
 
@@ -197,17 +182,11 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         cameraManager.closeDriver();
 
         if (!hasSurface) {
-            SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+            SurfaceView surfaceView = (SurfaceView) findViewById(R.id.capture_preview_view);
             SurfaceHolder surfaceHolder = surfaceView.getHolder();
             surfaceHolder.removeCallback(this);
         }
         super.onPause();
-    }
-
-    void stopHandler() {
-        if (handler != null) {
-            handler.stop();
-        }
     }
 
     @Override
@@ -230,7 +209,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
             // Exit the app if we're not viewing an OCR result.
             setResult(RESULT_CANCELED);
-            releaseBitmap();
+//            releaseBitmap();
             finish();
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_CAMERA) {
@@ -253,6 +232,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
             handler.resetState();
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -306,29 +286,18 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private void resetStatusView() {
         cameraButtonView.setVisibility(View.VISIBLE);
         shutterButton.setVisibility(View.VISIBLE);
-        savePictureTextView.setVisibility(View.GONE);
-        recaptureTextView.setVisibility(View.GONE);
-        if (pictureConfirmImageView != null) {
-            // release the memory
-            BitmapDrawable drawable = (BitmapDrawable) pictureConfirmImageView.getDrawable();
-            if (drawable != null && drawable.getBitmap() != null) {
-                drawable.getBitmap().recycle();
-                pictureConfirmImageView = null;
-            }
-        }
+//        savePictureTextView.setVisibility(View.GONE);
+//        recaptureTextView.setVisibility(View.GONE);
+//        if (pictureConfirmImageView != null) {
+//            // release the memory
+//            BitmapDrawable drawable = (BitmapDrawable) pictureConfirmImageView.getDrawable();
+//            if (drawable != null && drawable.getBitmap() != null) {
+//                drawable.getBitmap().recycle();
+//                pictureConfirmImageView = null;
+//            }
+//        }
     }
 
-
-    private void releaseBitmap() {
-        if (pictureConfirmImageView != null) {
-            // release the memory
-            BitmapDrawable drawable = (BitmapDrawable) pictureConfirmImageView.getDrawable();
-            if (drawable != null && drawable.getBitmap() != null) {
-                drawable.getBitmap().recycle();
-                pictureConfirmImageView = null;
-            }
-        }
-    }
     /**
      * Request the viewfinder to be invalidated.
      */
@@ -371,45 +340,51 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         beepManager.updatePrefs();
     }
 
+    private String saveTempImage(byte[] data) {
+        String image = null;
+        String tempFile = getExternalCacheDir().getAbsolutePath() + File.separator + "stackbase.jpg";
+        if (Helper.saveFile(tempFile, data)) {
+            image = tempFile;
+        }
+        return image;
+    }
+
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
         Log.d(TAG, "In onPictureTaken");
         if (data != null) {
-            int screenWidth = getResources().getDisplayMetrics().widthPixels;
-            int screenHeight = getResources().getDisplayMetrics().heightPixels;
-            Bitmap bm = BitmapFactory.decodeByteArray(data, 0, (data != null) ? data.length : 0);
-
-            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-                // Notice that width and height are reversed
-                Bitmap scaled = Bitmap.createScaledBitmap(bm, screenHeight, screenWidth, true);
-                int w = scaled.getWidth();
-                int h = scaled.getHeight();
-                // Setting post rotate to 90
-                Matrix mtx = new Matrix();
-                mtx.postRotate(90);
-                // Rotating Bitmap
-                bm = Bitmap.createBitmap(scaled, 0, 0, w, h, mtx, true);
-            } else {// LANDSCAPE MODE
-                //No need to reverse width and height
-                Bitmap scaled = Bitmap.createScaledBitmap(bm, screenWidth, screenHeight, true);
-                bm = scaled;
-            }
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bm.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            if (pictureConfirmImageView == null) {
-                pictureConfirmImageView = (ImageView) findViewById(R.id.pictureConfirmImageView);
-            }
-            if (pictureConfirmImageView != null) {
-                pictureConfirmImageView.setImageBitmap(bm);
-            }
-            try {
-                stream.close();
-            } catch (IOException e) {
-                Log.e(TAG, "Fail to close stream.", e);
-            }
+            Intent intent = new Intent();
+            intent.setClass(CaptureActivity.this, PictureConfirmActivity.class);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, saveTempImage(data));
+            intent.putExtra(Constant.INTENT_KEY_PIC_FOLDER,
+                    getIntent().getStringExtra(Constant.INTENT_KEY_PIC_FOLDER));
+            startActivityForResult(intent, 0);
+            handler.stop();
+//            if (pictureConfirmImageView == null) {
+//                pictureConfirmImageView = (ImageView) findViewById(R.id.pictureConfirmImageView);
+//            }
+//            if (pictureConfirmImageView != null) {
+//                pictureConfirmImageView.setImageBitmap(bm);
+//            }
         } else {
             Log.d(TAG, "Did not get the data when take picture!");
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                String fileName = data.getStringExtra(Constant.INTENT_KEY_PIC_FULLNAME);
+                Intent intent = new Intent();
+                intent.putExtra(Constant.INTENT_KEY_PIC_FULLNAME, fileName);
+                this.setResult(Activity.RESULT_OK, intent);
+                finish();
+            } else {
+                resumeContinuousCapture();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private File getOutputMediaFile() {
@@ -426,40 +401,20 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         return new File(picDir.getAbsolutePath() + File.separator + "IMAGE_" + timeStamp + ".jpg");
     }
 
-    private void savePictureFromView() {
-        if (pictureConfirmImageView != null) {
-            BitmapDrawable drawable = (BitmapDrawable) pictureConfirmImageView.getDrawable();
-            if (drawable != null && drawable.getBitmap() != null) {
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                drawable.getBitmap().compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
-                File pictureFile = getOutputMediaFile();
-                if (pictureFile == null) {
-                    Log.d(TAG, "Error creating media file, check storage permissions!!");
-                    return;
-                }
-                releaseBitmap();
-                try {
-                    stream.close();
-                } catch (IOException e) {
-                    Log.e(TAG, "Fail to close stream.", e);
-                }
-                Helper.saveFile(pictureFile.getAbsolutePath(), byteArray);
-            }
-        }
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.recaptureTextView:
-                resumeContinuousCapture();
-                break;
-            case R.id.savePictureTextView:
-                savePictureFromView();
-                finish();
-                break;
-        }
-    }
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()) {
+//            case R.id.recaptureTextView:
+//                resumeContinuousCapture();
+//                break;
+//            case R.id.savePictureTextView:
+//                String fileName = savePictureFromView();
+//                Intent intent = new Intent();
+//                intent.putExtra(Constant.INTENT_KEY_PIC_FULLNAME, fileName);
+//                this.setResult(Activity.RESULT_OK, intent);
+//                finish();
+//                break;
+//        }
+//    }
 }
 

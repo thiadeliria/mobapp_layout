@@ -52,8 +52,109 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int metaButtonBarStyle=0x7f010000;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int swipeActionLeft=0x7f01000a;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int swipeActionRight=0x7f01000b;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeAnimationTime=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeBackView=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeCloseAllItemsWhenMoveList=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeDrawableChecked=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeDrawableUnchecked=0x7f01000d;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeFrontView=0x7f010007;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>both</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int swipeMode=0x7f010009;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOffsetLeft=0x7f010004;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOffsetRight=0x7f010005;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOpenOnLongPress=0x7f010002;
     }
     public static final class color {
+        public static final int background_app=0x7f07000e;
+        public static final int background_list_back=0x7f07000f;
+        public static final int background_list_front=0x7f070010;
+        public static final int background_new_tag=0x7f070014;
         /**  viewfinder exterior darkened area 
          */
         public static final int black_overlay=0x7f07000b;
@@ -62,6 +163,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  help button view background color 
          */
         public static final int help_view=0x7f070001;
+        public static final int line=0x7f070013;
         /**  background color for entire help view 
          */
         public static final int result_minor_text=0x7f070002;
@@ -77,6 +179,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  status_view_top/status_view_bottom text color 
          */
         public static final int status_top_text_background=0x7f070006;
+        public static final int text_description=0x7f070012;
+        public static final int text_new_tag=0x7f070015;
+        public static final int text_title=0x7f070011;
         /**  status_view_top text background color 
          */
         public static final int translation_text=0x7f070007;
@@ -99,244 +204,294 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int activity_horizontal_margin=0x7f080000;
         public static final int activity_vertical_margin=0x7f080001;
+        public static final int font_size_description=0x7f080009;
+        public static final int font_size_new_tag=0x7f08000b;
+        public static final int font_size_title=0x7f080008;
+        /**  Products 
+         */
+        public static final int height_list=0x7f080006;
+        public static final int line_default=0x7f080005;
+        public static final int margin_default=0x7f080004;
+        public static final int margin_setting=0x7f08000a;
+        public static final int padding_default=0x7f080003;
+        public static final int padding_new_tag=0x7f08000c;
+        /**  Default 
+         */
+        public static final int radius_default=0x7f080002;
+        public static final int size_list_image=0x7f080007;
     }
     public static final class drawable {
         public static final int a=0x7f020000;
         public static final int acquisition=0x7f020001;
-        public static final int add_type=0x7f020002;
-        public static final int album=0x7f020003;
-        public static final int background=0x7f020004;
-        public static final int background_pressed=0x7f020005;
-        public static final int bg=0x7f020006;
-        public static final int bgd_divider=0x7f020007;
-        public static final int bgd_gradient_black=0x7f020008;
-        public static final int bgd_gradient_red=0x7f020009;
-        public static final int bgd_gradient_white=0x7f02000a;
-        public static final int border=0x7f02000b;
-        public static final int border_white=0x7f02000c;
-        public static final int borrowers=0x7f02000d;
-        public static final int button_transparent=0x7f02000e;
-        public static final int camera=0x7f02000f;
-        public static final int edittext_lightred=0x7f020010;
-        public static final int edittext_red=0x7f020011;
-        public static final int eloancn_logo=0x7f020012;
-        public static final int eloancn_logo_logo=0x7f020013;
-        public static final int grid_color_selector=0x7f020014;
-        public static final int ic_account_red=0x7f020015;
-        public static final int ic_account_ring=0x7f020016;
-        public static final int ic_action_new=0x7f020017;
-        public static final int ic_add_dark=0x7f020018;
-        public static final int ic_address=0x7f020019;
-        public static final int ic_bday=0x7f02001a;
-        public static final int ic_camera=0x7f02001b;
-        public static final int ic_check=0x7f02001c;
-        public static final int ic_id_back=0x7f02001d;
-        public static final int ic_id_front=0x7f02001e;
-        public static final int ic_info_ring=0x7f02001f;
-        public static final int ic_launcher=0x7f020020;
-        public static final int ic_location=0x7f020021;
-        public static final int ic_minzu=0x7f020022;
-        public static final int ic_notif_ring=0x7f020023;
-        public static final int ic_number=0x7f020024;
-        public static final int ic_replay=0x7f020025;
-        public static final int ic_settings_ring=0x7f020026;
-        public static final int ic_stranger=0x7f020027;
-        public static final int ic_user=0x7f020028;
-        public static final int ic_user_red=0x7f020029;
-        public static final int ic_user_ring=0x7f02002a;
-        public static final int ic_userinfo=0x7f02002b;
-        public static final int ic_users_red=0x7f02002c;
-        public static final int ic_users_ring=0x7f02002d;
-        public static final int ic_validity=0x7f02002e;
-        public static final int icon_settings_red=0x7f02002f;
-        public static final int id1=0x7f020030;
-        public static final int id2=0x7f020031;
-        public static final int labelicon_red=0x7f020032;
-        public static final int logo=0x7f020033;
-        public static final int logo_launcher=0x7f020034;
-        public static final int peoples=0x7f020035;
-        public static final int pic=0x7f020036;
-        public static final int qr=0x7f020037;
-        public static final int settings=0x7f020038;
-        public static final int shutter=0x7f020039;
-        public static final int shutter_button=0x7f02003a;
-        public static final int shutter_pressed=0x7f02003b;
-        public static final int stranger=0x7f02003c;
-        public static final int vector_dottedcircle=0x7f02003d;
-        public static final int video=0x7f02003e;
+        public static final int action_bar_icon_discard=0x7f020002;
+        public static final int action_bar_icon_settings=0x7f020003;
+        public static final int add_type=0x7f020004;
+        public static final int album=0x7f020005;
+        public static final int background=0x7f020006;
+        public static final int background_item=0x7f020007;
+        public static final int background_new_tag=0x7f020008;
+        public static final int background_pressed=0x7f020009;
+        public static final int bg=0x7f02000a;
+        public static final int bgd_divider=0x7f02000b;
+        public static final int bgd_gradient_black=0x7f02000c;
+        public static final int bgd_gradient_lightred=0x7f02000d;
+        public static final int bgd_gradient_red=0x7f02000e;
+        public static final int bgd_gradient_white=0x7f02000f;
+        public static final int border=0x7f020010;
+        public static final int border_white=0x7f020011;
+        public static final int borrowers=0x7f020012;
+        public static final int button_transparent=0x7f020013;
+        public static final int camera=0x7f020014;
+        public static final int choice_selected=0x7f020015;
+        public static final int choice_unselected=0x7f020016;
+        public static final int edittext_lightred=0x7f020017;
+        public static final int edittext_red=0x7f020018;
+        public static final int grid_color_selector=0x7f020019;
+        public static final int ic_account_red=0x7f02001a;
+        public static final int ic_account_ring=0x7f02001b;
+        public static final int ic_add=0x7f02001c;
+        public static final int ic_add_dark=0x7f02001d;
+        public static final int ic_address=0x7f02001e;
+        public static final int ic_bday=0x7f02001f;
+        public static final int ic_camera=0x7f020020;
+        public static final int ic_check=0x7f020021;
+        public static final int ic_discard=0x7f020022;
+        public static final int ic_id_back=0x7f020023;
+        public static final int ic_id_front=0x7f020024;
+        public static final int ic_info_ring=0x7f020025;
+        public static final int ic_launcher=0x7f020026;
+        public static final int ic_location=0x7f020027;
+        public static final int ic_minzu=0x7f020028;
+        public static final int ic_notif_ring=0x7f020029;
+        public static final int ic_number=0x7f02002a;
+        public static final int ic_replay=0x7f02002b;
+        public static final int ic_settings_ring=0x7f02002c;
+        public static final int ic_stranger=0x7f02002d;
+        public static final int ic_user=0x7f02002e;
+        public static final int ic_user_red=0x7f02002f;
+        public static final int ic_user_ring=0x7f020030;
+        public static final int ic_userinfo=0x7f020031;
+        public static final int ic_users_red=0x7f020032;
+        public static final int ic_users_ring=0x7f020033;
+        public static final int ic_validity=0x7f020034;
+        public static final int icon=0x7f020035;
+        public static final int icon_settings_red=0x7f020036;
+        public static final int id1=0x7f020037;
+        public static final int id2=0x7f020038;
+        public static final int labelicon_red=0x7f020039;
+        public static final int logo=0x7f02003a;
+        public static final int logo_banner=0x7f02003b;
+        public static final int logo_launcher=0x7f02003c;
+        public static final int logo_white=0x7f02003d;
+        public static final int logo_white_blurry=0x7f02003e;
+        public static final int peoples=0x7f02003f;
+        public static final int pic=0x7f020040;
+        public static final int qr=0x7f020041;
+        public static final int settings=0x7f020042;
+        public static final int shutter=0x7f020043;
+        public static final int shutter_button=0x7f020044;
+        public static final int shutter_pressed=0x7f020045;
+        public static final int stranger=0x7f020046;
+        public static final int vector_dottedcircle=0x7f020047;
+        public static final int video=0x7f020048;
     }
     public static final class id {
-        public static final int about_us=0x7f09006a;
-        public static final int account=0x7f090056;
-        public static final int account_id=0x7f090057;
-        public static final int action_settings=0x7f090070;
-        public static final int addEdit=0x7f09003b;
-        public static final int addText=0x7f09003a;
-        public static final int add_phone=0x7f09005e;
-        public static final int album_folder_1=0x7f090045;
-        public static final int album_folder_2=0x7f090047;
-        public static final int album_folder_3=0x7f090049;
-        public static final int arrow=0x7f09006b;
-        public static final int backView=0x7f090044;
-        public static final int borrowersLabel=0x7f090016;
-        public static final int cameraBtn=0x7f090014;
-        public static final int camera_button_view=0x7f09000d;
-        public static final int change_password=0x7f090059;
-        public static final int checkBox1=0x7f09005c;
-        public static final int checkBox2=0x7f090064;
-        public static final int checkBox3=0x7f090067;
-        public static final int circle=0x7f090011;
-        public static final int collect=0x7f09002c;
-        public static final int contractBtn=0x7f09004a;
-        public static final int creditReportBtn=0x7f090046;
-        public static final int dash=0x7f090041;
+        public static final int about_us=0x7f090074;
+        public static final int account=0x7f09005e;
+        public static final int account_id=0x7f09005f;
+        public static final int action_settings=0x7f09007f;
+        public static final int add_phone=0x7f090066;
+        public static final int addrEdit=0x7f090037;
+        public static final int addrText=0x7f090036;
+        public static final int album_folder_1=0x7f090041;
+        public static final int album_folder_2=0x7f090043;
+        public static final int album_folder_3=0x7f090045;
+        public static final int arrow=0x7f090075;
+        public static final int back=0x7f090027;
+        public static final int backView=0x7f090040;
+        public static final int borrowerHeadImage=0x7f09007a;
+        public static final int borrowerIdText=0x7f09007c;
+        public static final int borrowerNameText=0x7f09007b;
+        public static final int borrowersLabel=0x7f09001c;
+        public static final int both=0x7f09000c;
+        public static final int cameraBtn=0x7f09001a;
+        public static final int camera_button_view=0x7f090013;
+        public static final int capture_preview_view=0x7f090012;
+        public static final int change_password=0x7f090061;
+        public static final int checkBox1=0x7f090064;
+        public static final int checkBox2=0x7f09006d;
+        public static final int checkBox3=0x7f090070;
+        public static final int choice=0x7f090011;
+        public static final int circle=0x7f090017;
+        public static final int collect=0x7f090028;
+        public static final int contractBtn=0x7f090046;
+        public static final int creditReportBtn=0x7f090042;
+        public static final int dash=0x7f09003d;
         public static final int decode=0x7f090000;
         public static final int decode_failed=0x7f090001;
         public static final int decode_succeeded=0x7f090002;
-        public static final int divider0=0x7f09005f;
-        public static final int divider1=0x7f090058;
-        public static final int divider2=0x7f09005a;
-        public static final int divider3=0x7f09005d;
-        public static final int divider6=0x7f090065;
-        public static final int divider8=0x7f09006c;
-        public static final int dobEdit=0x7f090039;
-        public static final int dobText=0x7f090038;
-        public static final int done_button=0x7f09004e;
-        public static final int expiryEdit=0x7f090040;
-        public static final int expiryEdit2=0x7f090042;
-        public static final int expiryLayout=0x7f09003f;
-        public static final int expiryText=0x7f09003e;
-        public static final int femaleButton=0x7f090033;
-        public static final int frontView=0x7f090043;
-        public static final int genderRadio=0x7f090031;
-        public static final int help_contents=0x7f09004d;
-        public static final int idEdit=0x7f090037;
-        public static final int idText=0x7f090036;
-        public static final int imageButton4=0x7f09004c;
-        public static final int imageView=0x7f09002e;
-        public static final int keep_logged_in=0x7f09005b;
-        public static final int locationEdit=0x7f09003d;
-        public static final int locationText=0x7f09003c;
-        public static final int logo=0x7f090012;
-        public static final int maleButton=0x7f090032;
-        public static final int manageBtn=0x7f090015;
-        public static final int marriageCertBtn=0x7f090048;
-        public static final int minzuEdit=0x7f090035;
-        public static final int minzuText=0x7f090034;
-        public static final int nameEdit=0x7f090030;
-        public static final int nameText=0x7f09002f;
-        public static final int notify_me=0x7f090063;
+        public static final int delBorrowerBtn=0x7f090078;
+        public static final int dismiss=0x7f090010;
+        public static final int divider0=0x7f090067;
+        public static final int divider1=0x7f090060;
+        public static final int divider2=0x7f090062;
+        public static final int divider3=0x7f090065;
+        public static final int divider6=0x7f09006e;
+        public static final int divider8=0x7f090076;
+        public static final int dobEdit=0x7f090035;
+        public static final int dobText=0x7f090034;
+        public static final int done_button=0x7f09004a;
+        public static final int expiryFromEdit=0x7f09003c;
+        public static final int expiryFromText=0x7f09003a;
+        public static final int expiryLayout=0x7f09003b;
+        public static final int expiryToEdit=0x7f09003e;
+        public static final int femaleButton=0x7f09002f;
+        public static final int front=0x7f090026;
+        public static final int frontView=0x7f09003f;
+        public static final int full_image_view=0x7f090015;
+        public static final int genderRadio=0x7f09002d;
+        public static final int help_contents=0x7f090049;
+        public static final int idEdit=0x7f090033;
+        public static final int idText=0x7f090032;
+        public static final int imageButton4=0x7f090048;
+        public static final int imageView=0x7f09002a;
+        public static final int image_view=0x7f09004e;
+        public static final int indeterminate_progress_indicator_view=0x7f090052;
+        public static final int keep_logged_in=0x7f090063;
+        public static final int left=0x7f09000e;
+        public static final int locationEdit=0x7f090039;
+        public static final int locationText=0x7f090038;
+        public static final int logo=0x7f090018;
+        public static final int maleButton=0x7f09002e;
+        public static final int manageBtn=0x7f09001b;
+        public static final int marriageCertBtn=0x7f090044;
+        public static final int minzuEdit=0x7f090031;
+        public static final int minzuText=0x7f090030;
+        public static final int nameEdit=0x7f09002c;
+        public static final int nameText=0x7f09002b;
+        public static final int none=0x7f09000b;
+        public static final int notify_me=0x7f09006c;
         public static final int ocr_continuous_decode=0x7f090003;
         public static final int ocr_continuous_decode_failed=0x7f090004;
         public static final int ocr_continuous_decode_succeeded=0x7f090005;
         public static final int ocr_decode=0x7f090006;
         public static final int ocr_decode_failed=0x7f090007;
         public static final int ocr_decode_succeeded=0x7f090008;
-        public static final int panel_1=0x7f09001c;
-        public static final int panel_1_icon=0x7f090054;
-        public static final int panel_1_label=0x7f090055;
-        public static final int panel_2=0x7f090020;
-        public static final int panel_2_icon=0x7f090061;
-        public static final int panel_2_label=0x7f090062;
-        public static final int panel_3=0x7f090024;
-        public static final int panel_3_icon=0x7f090068;
-        public static final int panel_3_label=0x7f090069;
-        public static final int panel_4=0x7f090028;
-        public static final int parent_layout=0x7f090053;
-        public static final int phone=0x7f090060;
-        public static final int pictureConfirmImageView=0x7f09000b;
-        public static final int pictureImageView=0x7f09006e;
-        public static final int pictureTexView=0x7f09006f;
-        public static final int picturesGridView=0x7f09001b;
-        public static final int preview_view=0x7f09000c;
-        public static final int ptypeName=0x7f090050;
-        public static final int ptypeSpinner=0x7f090051;
+        public static final int ocr_result_text_view=0x7f090051;
+        public static final int panel_1=0x7f09005d;
+        public static final int panel_1_icon=0x7f09005b;
+        public static final int panel_1_label=0x7f09005c;
+        public static final int panel_2=0x7f09006b;
+        public static final int panel_2_icon=0x7f090069;
+        public static final int panel_2_label=0x7f09006a;
+        public static final int panel_3=0x7f090073;
+        public static final int panel_3_icon=0x7f090071;
+        public static final int panel_3_label=0x7f090072;
+        public static final int parent_layout=0x7f09005a;
+        public static final int phone=0x7f090068;
+        public static final int pictureConfirmImageView=0x7f09001f;
+        public static final int pictureImageView=0x7f09007d;
+        public static final int pictureTexView=0x7f09007e;
+        public static final int picturesGridView=0x7f090024;
+        public static final int preview_view=0x7f09004b;
+        public static final int progress_small=0x7f090053;
+        public static final int ptypeName=0x7f090057;
+        public static final int ptypeSpinner=0x7f090058;
         public static final int quit=0x7f090009;
-        public static final int rec_student_1=0x7f09001d;
-        public static final int rec_student_1_info=0x7f09001f;
-        public static final int rec_student_1_name=0x7f09001e;
-        public static final int rec_student_2=0x7f090021;
-        public static final int rec_student_2_info=0x7f090023;
-        public static final int rec_student_2_name=0x7f090022;
-        public static final int rec_student_3=0x7f090025;
-        public static final int rec_student_3_info=0x7f090027;
-        public static final int rec_student_3_name=0x7f090026;
-        public static final int rec_student_4=0x7f090029;
-        public static final int rec_student_4_info=0x7f09002b;
-        public static final int rec_student_4_name=0x7f09002a;
-        public static final int recaptureTextView=0x7f09000f;
-        public static final int relativeLayout1=0x7f09002d;
+        public static final int recaptureTextView=0x7f090021;
+        public static final int relativeLayout1=0x7f090029;
         public static final int restart_preview=0x7f09000a;
-        public static final int savePictureTextView=0x7f090010;
-        public static final int scrollView=0x7f090052;
-        public static final int selectPictureTypeDialog=0x7f09004f;
-        public static final int settingsBtn=0x7f090017;
-        public static final int settingsLabel=0x7f090018;
-        public static final int shutter_button=0x7f09000e;
-        public static final int sign_out=0x7f09006d;
-        public static final int takepictureBtn=0x7f09001a;
-        public static final int textView9=0x7f09004b;
-        public static final int topBanner=0x7f090019;
-        public static final int userinfoLabel=0x7f090013;
-        public static final int vibrate=0x7f090066;
+        public static final int result_view=0x7f09004d;
+        public static final int reveal=0x7f09000f;
+        public static final int right=0x7f09000d;
+        public static final int savePictureTextView=0x7f090022;
+        public static final int scrollView=0x7f090059;
+        public static final int selectPictureTypeDialog=0x7f090056;
+        public static final int settingsBtn=0x7f09001d;
+        public static final int settingsLabel=0x7f09001e;
+        public static final int shutter_button=0x7f090014;
+        public static final int sign_out=0x7f090077;
+        public static final int source_language_text_view=0x7f090050;
+        public static final int source_language_text_view_label=0x7f09004f;
+        public static final int square=0x7f090016;
+        public static final int status_view_bottom=0x7f090055;
+        public static final int status_view_top=0x7f090054;
+        public static final int swipe_list_view=0x7f090025;
+        public static final int takepictureBtn=0x7f090023;
+        public static final int textView9=0x7f090047;
+        public static final int topBanner=0x7f090020;
+        public static final int uploadBorrowerBtn=0x7f090079;
+        public static final int userinfoLabel=0x7f090019;
+        public static final int vibrate=0x7f09006f;
+        public static final int viewfinder_view=0x7f09004c;
     }
     public static final class layout {
         public static final int activity_capture=0x7f030000;
-        public static final int activity_home=0x7f030001;
-        public static final int activity_thumbnails=0x7f030002;
-        public static final int borrower_list=0x7f030003;
-        public static final int collect=0x7f030004;
-        public static final int fragment_idcard=0x7f030005;
-        public static final int fragment_otherinfo=0x7f030006;
-        public static final int help=0x7f030007;
-        public static final int select_picture_type=0x7f030008;
-        public static final int settings=0x7f030009;
-        public static final int thumbnail_row=0x7f03000a;
+        public static final int activity_full_picture_review=0x7f030001;
+        public static final int activity_home=0x7f030002;
+        public static final int activity_picture_confirm=0x7f030003;
+        public static final int activity_thumbnails=0x7f030004;
+        public static final int borrower_list=0x7f030005;
+        public static final int collect=0x7f030006;
+        public static final int fragment_idcard=0x7f030007;
+        public static final int fragment_otherinfo=0x7f030008;
+        public static final int help=0x7f030009;
+        public static final int ocr_capture=0x7f03000a;
+        public static final int select_picture_type=0x7f03000b;
+        public static final int settings=0x7f03000c;
+        public static final int swipe_row=0x7f03000d;
+        public static final int thumbnail_row=0x7f03000e;
     }
     public static final class menu {
         public static final int menu_capture=0x7f0c0000;
-        public static final int menu_select_picture_type=0x7f0c0001;
-        public static final int menu_thumbnails=0x7f0c0002;
+        public static final int menu_picture_confirm=0x7f0c0001;
+        public static final int menu_select_picture_type=0x7f0c0002;
+        public static final int menu_thumbnails=0x7f0c0003;
     }
     public static final class raw {
         public static final int beep=0x7f050000;
     }
     public static final class string {
-        public static final int action_settings=0x7f0a0008;
-        public static final int album_folder_tag=0x7f0a0009;
-        /**      app basics 
+        public static final int action_settings=0x7f0a000a;
+        public static final int album_folder_tag=0x7f0a000b;
+        /**  app basics 
          */
         public static final int app_name=0x7f0a0000;
         public static final int borrowers=0x7f0a0003;
-        public static final int dummy_button=0x7f0a000d;
-        public static final int dummy_content=0x7f0a000e;
-        public static final int hello_world=0x7f0a0010;
+        public static final int delete=0x7f0a0013;
+        public static final int dummy_button=0x7f0a000f;
+        public static final int dummy_content=0x7f0a0010;
+        public static final int err_id_needed=0x7f0a0019;
+        public static final int err_nosd=0x7f0a0017;
+        public static final int err_title=0x7f0a0018;
+        public static final int hello_world=0x7f0a0012;
+        public static final int id_card=0x7f0a0005;
+        public static final int loading=0x7f0a0015;
         public static final int my_info=0x7f0a0002;
+        public static final int other_info=0x7f0a0006;
         public static final int pressAgain=0x7f0a0001;
-        public static final int retake=0x7f0a0006;
+        public static final int retake=0x7f0a0008;
         public static final int settings=0x7f0a0004;
-        public static final int storage_dir=0x7f0a000b;
-        public static final int title_activity_capture=0x7f0a000a;
-        public static final int title_activity_fullscreen=0x7f0a000c;
-        public static final int title_activity_select_picture_type=0x7f0a0007;
-        public static final int title_activity_thumbnails=0x7f0a000f;
-        /**      capture 
+        public static final int storage_dir=0x7f0a000d;
+        public static final int title_activity_capture=0x7f0a000c;
+        public static final int title_activity_fullscreen=0x7f0a000e;
+        public static final int title_activity_picture_confirm=0x7f0a0016;
+        public static final int title_activity_select_picture_type=0x7f0a0009;
+        public static final int title_activity_thumbnails=0x7f0a0011;
+        public static final int upload=0x7f0a0014;
+        /**  ocr_capture 
          */
-        public static final int use_picture=0x7f0a0005;
+        public static final int use_picture=0x7f0a0007;
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-
-
+    Base application theme, dependent on API level. This theme is replaced
+    by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     
 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
+        Theme customizations available in newer API levels can go in
+        res/values-vXX/styles.xml, while customizations related to
+        backward-compatibility can go here.
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -356,10 +511,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int AppTheme=0x7f0b0001;
         public static final int ButtonBar=0x7f0b0003;
         public static final int ButtonBarButton=0x7f0b0004;
-        public static final int FullscreenActionBarStyle=0x7f0b0007;
+        public static final int FullscreenActionBarStyle=0x7f0b0010;
         public static final int FullscreenTheme=0x7f0b0002;
+        public static final int Line=0x7f0b000f;
+        public static final int ListBackContent=0x7f0b0007;
+        public static final int ListButtonAction=0x7f0b000c;
+        public static final int ListDescription=0x7f0b000b;
+        public static final int ListFrontContent=0x7f0b0008;
+        public static final int ListImage=0x7f0b0009;
+        public static final int ListTitle=0x7f0b000a;
+        public static final int SettingContent=0x7f0b000e;
         public static final int SettingLabel=0x7f0b0005;
         public static final int SettingText=0x7f0b0006;
+        /**  Settings 
+         */
+        public static final int SettingTitle=0x7f0b000d;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
@@ -403,5 +569,211 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.stackbase.mobapp:metaButtonBarStyle
         */
         public static final int ButtonBarContainerTheme_metaButtonBarStyle = 0;
+        /** Attributes that can be used with a SwipeListView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SwipeListView_swipeActionLeft com.stackbase.mobapp:swipeActionLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeActionRight com.stackbase.mobapp:swipeActionRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeAnimationTime com.stackbase.mobapp:swipeAnimationTime}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeBackView com.stackbase.mobapp:swipeBackView}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeCloseAllItemsWhenMoveList com.stackbase.mobapp:swipeCloseAllItemsWhenMoveList}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeDrawableChecked com.stackbase.mobapp:swipeDrawableChecked}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeDrawableUnchecked com.stackbase.mobapp:swipeDrawableUnchecked}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeFrontView com.stackbase.mobapp:swipeFrontView}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeMode com.stackbase.mobapp:swipeMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOffsetLeft com.stackbase.mobapp:swipeOffsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOffsetRight com.stackbase.mobapp:swipeOffsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOpenOnLongPress com.stackbase.mobapp:swipeOpenOnLongPress}</code></td><td></td></tr>
+           </table>
+           @see #SwipeListView_swipeActionLeft
+           @see #SwipeListView_swipeActionRight
+           @see #SwipeListView_swipeAnimationTime
+           @see #SwipeListView_swipeBackView
+           @see #SwipeListView_swipeCloseAllItemsWhenMoveList
+           @see #SwipeListView_swipeDrawableChecked
+           @see #SwipeListView_swipeDrawableUnchecked
+           @see #SwipeListView_swipeFrontView
+           @see #SwipeListView_swipeMode
+           @see #SwipeListView_swipeOffsetLeft
+           @see #SwipeListView_swipeOffsetRight
+           @see #SwipeListView_swipeOpenOnLongPress
+         */
+        public static final int[] SwipeListView = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeActionLeft}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name com.stackbase.mobapp:swipeActionLeft
+        */
+        public static final int SwipeListView_swipeActionLeft = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeActionRight}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name com.stackbase.mobapp:swipeActionRight
+        */
+        public static final int SwipeListView_swipeActionRight = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeAnimationTime}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stackbase.mobapp:swipeAnimationTime
+        */
+        public static final int SwipeListView_swipeAnimationTime = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeBackView}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.stackbase.mobapp:swipeBackView
+        */
+        public static final int SwipeListView_swipeBackView = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeCloseAllItemsWhenMoveList}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stackbase.mobapp:swipeCloseAllItemsWhenMoveList
+        */
+        public static final int SwipeListView_swipeCloseAllItemsWhenMoveList = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeDrawableChecked}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.stackbase.mobapp:swipeDrawableChecked
+        */
+        public static final int SwipeListView_swipeDrawableChecked = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeDrawableUnchecked}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.stackbase.mobapp:swipeDrawableUnchecked
+        */
+        public static final int SwipeListView_swipeDrawableUnchecked = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeFrontView}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.stackbase.mobapp:swipeFrontView
+        */
+        public static final int SwipeListView_swipeFrontView = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeMode}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>both</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name com.stackbase.mobapp:swipeMode
+        */
+        public static final int SwipeListView_swipeMode = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeOffsetLeft}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stackbase.mobapp:swipeOffsetLeft
+        */
+        public static final int SwipeListView_swipeOffsetLeft = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeOffsetRight}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stackbase.mobapp:swipeOffsetRight
+        */
+        public static final int SwipeListView_swipeOffsetRight = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.stackbase.mobapp.R.attr#swipeOpenOnLongPress}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stackbase.mobapp:swipeOpenOnLongPress
+        */
+        public static final int SwipeListView_swipeOpenOnLongPress = 0;
     };
 }

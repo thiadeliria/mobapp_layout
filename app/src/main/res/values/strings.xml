@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--     app basics -->
+
+    <!-- app basics -->
     <string name="app_name">翼龙贷</string>
     <string name="pressAgain">再按一次退出</string>
     <string name="my_info">个人信息</string>
     <string name="borrowers">借款人管理</string>
     <string name="settings">设置</string>
-    
-<!--     capture -->
+    <string name="id_card">身份证</string>
+    <string name="other_info">其他信息</string>
+    <!-- ocr_capture -->
     <string name="use_picture">使用照片</string>
     <string name="retake">重拍</string>
-    
-    
-    
     <string name="title_activity_select_picture_type">SelectPictureTypeActivity</string>
     <string name="action_settings">设置</string>
     <string name="album_folder_tag">album_folder_name</string>
@@ -23,5 +22,12 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_thumbnails">ThumbnailsActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="delete">删除</string>
+    <string name="upload">上传</string>
+    <string name="loading">载入...</string>
+    <string name="title_activity_picture_confirm">PictureConfirmActivity</string>
+    <string name="err_nosd">没有检测到存储卡, 请确认存储卡已经正确安装.</string>
+    <string name="err_title">错误</string>
+    <string name="err_id_needed">必须输入姓名和身份证号码.</string>
 
 </resources>

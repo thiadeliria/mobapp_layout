@@ -4,168 +4,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgd_gradient_red"
     android:orientation="vertical" >
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <RelativeLayout
-                android:id="@+id/panel_1"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:background="#fffbf2"
-                android:clickable="true"
-                android:padding="11dp" >
-
-                <ImageView
-                    android:id="@+id/rec_student_1"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_user_red" />
-
-                <TextView
-                    android:id="@+id/rec_student_1_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:layout_toRightOf="@+id/rec_student_1"
-                    android:text="借贷人1"
-                    android:textColor="#ffca6d"
-                    android:textSize="21sp" />
-
-                <TextView
-                    android:id="@+id/rec_student_1_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rec_student_1_name"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/rec_student_1"
-                    android:text="某信息    |    某信息"
-                    android:textColor="#555047"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/panel_2"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:background="#fdf5e5"
-                android:clickable="true"
-                android:padding="11dp" >
-
-                <ImageView
-                    android:id="@+id/rec_student_2"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_user_red" />
-
-                <TextView
-                    android:id="@+id/rec_student_2_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:layout_toRightOf="@+id/rec_student_2"
-                    android:text="借贷人2"
-                    android:textColor="#ffca6d"
-                    android:textSize="21sp" />
-
-                <TextView
-                    android:id="@+id/rec_student_2_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rec_student_2_name"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/rec_student_2"
-                    android:text="某信息    |    某信息"
-                    android:textColor="#555047"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/panel_3"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:background="#fffbf2"
-                android:clickable="true"
-                android:padding="11dp" >
-
-                <ImageView
-                    android:id="@+id/rec_student_3"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_user_red" />
-
-                <TextView
-                    android:id="@+id/rec_student_3_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:layout_toRightOf="@+id/rec_student_3"
-                    android:text="借贷人3"
-                    android:textColor="#ffca6d"
-                    android:textSize="21sp" />
-
-                <TextView
-                    android:id="@+id/rec_student_3_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rec_student_3_name"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/rec_student_3"
-                    android:text="某信息    |    某信息"
-                    android:textColor="#555047"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/panel_4"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:background="#fdf5e5"
-                android:clickable="true"
-                android:padding="11dp" >
-
-                <ImageView
-                    android:id="@+id/rec_student_4"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_user_red" />
-
-                <TextView
-                    android:id="@+id/rec_student_4_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:layout_toRightOf="@+id/rec_student_4"
-                    android:text="借贷人4"
-                    android:textColor="#ffca6d"
-                    android:textSize="21sp" />
-
-                <TextView
-                    android:id="@+id/rec_student_4_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rec_student_4_name"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/rec_student_4"
-                    android:text="某信息    |    某信息"
-                    android:textColor="#555047"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
-
+    <com.stackbase.mobapp.view.swipelistview.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe_list_view"
+        android:listSelector="#00000000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeDrawableChecked="@drawable/choice_selected"
+        swipe:swipeDrawableUnchecked="@drawable/choice_unselected"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="50dip"
+        />
 </LinearLayout>

@@ -2,19 +2,27 @@ package com.stackbase.mobapp.objects;
 
 import java.util.Date;
 
-/**
- * Created by gengjh on 1/18/15.
- */
-public class Borrower extends Person {
+public class Borrower extends JSONObj {
     private String id = "";
     private String name = "";
-    private String sex = "";
+    private String gender = "";
     private String nation = "";
     private Date birthday = null;
     private String address = "";
-    private String issue = "";
-    private Date validityDateFrom = null;
-    private Date validityDateTo = null;
+    private String location = "";
+    private Date expiryFrom = null;
+    private Date expiryTo = null;
+    private String idPicture1 = "";
+    private String idPicture2 = "";
+    private String jsonFile = "";
+
+    public Borrower() {
+        super();
+    }
+
+    public Borrower(String jsonFile) {
+        this.fromJSON(jsonFile);
+    }
 
     public String getId() {
         return id;
@@ -32,12 +40,12 @@ public class Borrower extends Person {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getNation() {
@@ -64,27 +72,51 @@ public class Borrower extends Person {
         this.address = address;
     }
 
-    public String getIssue() {
-        return issue;
+    public String getLocation() {
+        return location;
     }
 
-    public void setIssue(String issue) {
-        this.issue = issue;
+    public void setLocation(String issue) {
+        this.location = issue;
     }
 
-    public Date getValidityDateFrom() {
-        return validityDateFrom;
+    public Date getExpiryFrom() {
+        return expiryFrom;
     }
 
-    public void setValidityDateFrom(Date validityDateFrom) {
-        this.validityDateFrom = validityDateFrom;
+    public void setExpiryFrom(Date validityDateFrom) {
+        this.expiryFrom = validityDateFrom;
     }
 
-    public Date getValidityDateTo() {
-        return validityDateTo;
+    public Date getExpiryTo() {
+        return expiryTo;
     }
 
-    public void setValidityDateTo(Date validityDateTo) {
-        this.validityDateTo = validityDateTo;
+    public void setExpiryTo(Date validityDateTo) {
+        this.expiryTo = validityDateTo;
+    }
+
+    public String getIdPicture1() {
+        return idPicture1;
+    }
+
+    public void setIdPicture1(String idPicture1) {
+        this.idPicture1 = idPicture1;
+    }
+
+    public String getIdPicture2() {
+        return idPicture2;
+    }
+
+    public void setIdPicture2(String idPicture2) {
+        this.idPicture2 = idPicture2;
+    }
+
+    public String getJsonFile() {
+        return jsonFile;
+    }
+
+    public void setJsonFile(String jsonFile) {
+        this.jsonFile = jsonFile;
     }
 }

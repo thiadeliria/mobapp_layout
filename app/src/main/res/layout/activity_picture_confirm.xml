@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.stackbase.mobapp.activity.PictureConfirmActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bgd_gradient_red"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pictureConfirmImageView"
+            android:layout_centerInParent="true"
+            android:background="@drawable/camera" />
+
+        <ImageView
+            android:id="@+id/topBanner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bgd_gradient_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/retake"
+            android:id="@+id/recaptureTextView"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/use_picture"
+            android:id="@+id/savePictureTextView"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="10dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

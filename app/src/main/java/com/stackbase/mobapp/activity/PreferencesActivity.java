@@ -3,7 +3,6 @@ package com.stackbase.mobapp.activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
@@ -23,6 +22,7 @@ import com.stackbase.mobapp.utils.Constant;
 public class PreferencesActivity extends PreferenceActivity implements
         OnSharedPreferenceChangeListener {
 
+    public static final String KEY_SOURCE_LANGUAGE_PREFERENCE = "sourceLanguageCodeOcrPref";
     // Preference keys not carried over from ZXing project
     public static final String KEY_PAGE_SEGMENTATION_MODE = "preference_page_segmentation_mode";
     public static final String KEY_OCR_ENGINE_MODE = "preference_ocr_engine_mode";
@@ -30,6 +30,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static final String KEY_CHARACTER_WHITELIST = "preference_character_whitelist";
     public static final String KEY_TOGGLE_LIGHT = "preference_toggle_light";
     public static final String KEY_TRANSLATOR = "preference_translator";
+    public static final String KEY_CONTINUOUS_PREVIEW = "preference_capture_continuous";
 
     // Preference keys carried over from ZXing project
     public static final String KEY_AUTO_FOCUS = "preferences_auto_focus";

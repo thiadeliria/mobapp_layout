@@ -1,19 +1,26 @@
 package com.stackbase.mobapp.utils;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Environment;
 import android.util.Log;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
+
+import com.stackbase.mobapp.objects.Borrower;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -24,6 +31,8 @@ abstract public class Helper {
 
     private static final String TAG = Helper.class.getSimpleName();
 
+    private static final String BORROWER_FILE_NAME = "id.json";
+
     /**
      * Displays an error message dialog box to the user on the UI thread.
      *
@@ -31,14 +40,18 @@ abstract public class Helper {
      * @param message The error message to be displayed
      */
     public static void showErrorMessage(Context context, String title, String message,
-                                        DialogInterface.OnCancelListener cancelListener,
+                                        DialogInterface.OnClickListener cancelListener,
                                         DialogInterface.OnClickListener positiveListener) {
-        new AlertDialog.Builder(context)
-                .setTitle(title)
-                .setMessage(message)
-                .setOnCancelListener(cancelListener)
-                .setPositiveButton("确认", positiveListener)
-                .show();
+        AlertDialog.Builder dialog = new AlertDialog.Builder(context).setTitle(title)
+                .setMessage(message);
+        if (cancelListener != null) {
+            dialog.setNegativeButton("取消", cancelListener);
+        }
+        if (positiveListener != null) {
+            dialog.setPositiveButton("确认", positiveListener);
+        }
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     /**
@@ -277,5 +290,61 @@ abstract public class Helper {
          * @param message, error message
          */
         void onErrorTaken(String title, String message);
+    }
+
+    public static boolean saveBorrower(Borrower borrower, String rootDir) {
+        String subFolder = Helper.getMD5String(borrower.getName() + borrower.getId());
+        String idFile = rootDir + File.separator + subFolder + File.separator + BORROWER_FILE_NAME;
+        borrower.setJsonFile(idFile);
+        boolean result = false;
+        try {
+            result = Helper.saveFile(idFile, borrower.toJson().toString().getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException ex) {
+            Log.d(TAG, "Fail to save id file " + ex.getMessage());
+        }
+        return result;
+    }
+
+    public static ArrayList<Borrower> loadBorrowersInfo(String rootDir) {
+        ArrayList<Borrower> borrowers = new ArrayList<>();
+        File brDir = new File(rootDir);
+        if (brDir.isDirectory()) {
+            for (File file : brDir.listFiles()) {
+                if (isValidMD5(file.getName())) {
+                    borrowers.add(new Borrower(file.getAbsolutePath() + File.separator
+                            + BORROWER_FILE_NAME));
+                }
+            }
+        }
+        return borrowers;
+    }
+
+    // Delete all the borrower's files
+    public static void deleteBorrower(String idJsonFile) {
+        File file = new File(idJsonFile);
+        FileUtils.deleteDirectory(file.getParentFile());
+    }
+
+    public static boolean checkSDCard() {
+        if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void mMakeTextToast(Activity activity, String str, boolean isLong) {
+        if (isLong == true) {
+            Toast.makeText(activity, str, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(activity, str, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public static void hideSoftKeyboard(Activity activity) {
+        if (activity.getCurrentFocus() != null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        }
     }
 }

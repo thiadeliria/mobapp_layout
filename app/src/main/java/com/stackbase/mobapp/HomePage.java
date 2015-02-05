@@ -1,6 +1,7 @@
 package com.stackbase.mobapp;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -46,6 +47,17 @@ public class HomePage extends Activity implements Helper.ErrorCallback {
             setDefaultPreferences();
         }
 
+        if (!Helper.checkSDCard()) {
+            DialogInterface.OnClickListener alertListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            };
+            Helper.showErrorMessage(this, getString(R.string.err_title), getString(R.string.err_nosd),
+                    null, alertListener);
+
+        }
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
 

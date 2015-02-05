@@ -6,7 +6,7 @@
         android:width="180dp"
         android:height="180dp" />
     <stroke
-        android:color="#b5311f"
+        android:color="#c3321f"
         android:width="3dp"
         android:dashGap="4dp"
         android:dashWidth="17dp" />

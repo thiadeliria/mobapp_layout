@@ -1,42 +1,25 @@
 package com.stackbase.mobapp.view;
 
-import android.graphics.Bitmap;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ImageItem {
-    private Bitmap image;
-    private String title;
+    private ImageView imageView;
+    private TextView textView;
 
-    private String picPath;
-
-    public ImageItem(Bitmap image, String title, String picPath) {
-        super();
-        this.image = image;
-        this.title = title;
-        this.picPath = picPath;
+    public ImageView getImageView() {
+        return imageView;
     }
 
-    public Bitmap getImage() {
-        return image;
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
     }
 
-    public void setImage(Bitmap image) {
-        this.image = image;
+    public TextView getTextView() {
+        return textView;
     }
 
-    public String getTitle() {
-        return title;
+    public void setTextView(TextView textView) {
+        this.textView = textView;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getPicPath() {
-        return picPath;
-    }
-
-    public void setPicPath(String picPath) {
-        this.picPath = picPath;
-    }
-
 }

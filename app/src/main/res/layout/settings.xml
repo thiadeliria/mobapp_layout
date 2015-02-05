@@ -267,8 +267,9 @@
 
             <Button
                 android:id="@+id/arrow"
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/about_us"
                 android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
                 android:text=">"
@@ -293,4 +294,5 @@
                 android:text="退出" />
         </RelativeLayout>
     </LinearLayout>
+
 </ScrollView>

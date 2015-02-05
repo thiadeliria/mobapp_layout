@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgd_gradient_red"
+    android:nestedScrollingEnabled="true"
     android:padding="17dp"
-    android:useDefaultMargins="true" >
+    android:useDefaultMargins="true"
+    >
 
     <TextView
         android:id="@+id/album_folder_1"
@@ -86,6 +88,6 @@
         android:layout_column="0"
         android:layout_gravity="center_horizontal"
         android:layout_row="2"
-        android:background="@drawable/ic_action_new" />
+        android:background="@drawable/ic_add" />
 
 </GridLayout>

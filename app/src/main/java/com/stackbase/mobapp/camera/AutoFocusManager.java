@@ -33,7 +33,7 @@ public final class AutoFocusManager implements Camera.AutoFocusCallback {
     private boolean manual;
     private TimerTask outstandingTask;
 
-    AutoFocusManager(Context context, Camera camera) {
+    public AutoFocusManager(Context context, Camera camera) {
         this.camera = camera;
         timer = new Timer(true);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -81,7 +81,7 @@ public final class AutoFocusManager implements Camera.AutoFocusCallback {
      *
      * @param delay Time to wait before auto-focusing, in milliseconds
      */
-    synchronized void start(long delay) {
+    public synchronized void start(long delay) {
         outstandingTask = new TimerTask() {
             @Override
             public void run() {
@@ -92,7 +92,7 @@ public final class AutoFocusManager implements Camera.AutoFocusCallback {
         timer.schedule(outstandingTask, delay);
     }
 
-    synchronized void stop() {
+    public synchronized void stop() {
         if (useAutoFocus) {
             camera.cancelAutoFocus();
         }

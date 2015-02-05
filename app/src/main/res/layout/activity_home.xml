@@ -4,82 +4,88 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bgd_gradient_red" >
 
-    <ImageView
-        android:id="@+id/circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/vector_dottedcircle" />
+    <RelativeLayout
+        android:id="@+id/square"
+        android:layout_width="280dp"
+        android:layout_height="380dp"
+        android:layout_centerInParent="true" >
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/logo" />
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/vector_dottedcircle" />
 
-    <TextView
-        android:id="@+id/userinfoLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/cameraBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="4dp"
-        android:text="@string/my_info"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_white" />
 
-    <ImageButton
-        android:id="@+id/cameraBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/ic_account_red" />
+        <TextView
+            android:id="@+id/userinfoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cameraBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:text="@string/my_info"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/manageBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/logo"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="55dp"
-        android:background="@drawable/ic_users_red" />
+        <ImageButton
+            android:id="@+id/cameraBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/ic_account_red" />
 
-    <TextView
-        android:id="@+id/borrowersLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/manageBtn"
-        android:layout_marginLeft="35dp"
-        android:text="@string/borrowers"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/manageBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_users_red" />
 
-    <ImageButton
-        android:id="@+id/settingsBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/logo"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="55dp"
-        android:background="@drawable/icon_settings_red" />
+        <TextView
+            android:id="@+id/borrowersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manageBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            android:text="@string/borrowers"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/settingsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/settingsBtn"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="63dp"
-        android:text="@string/settings"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/settingsBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_below="@+id/logo"
+            android:background="@drawable/icon_settings_red" />
+
+        <TextView
+            android:id="@+id/settingsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/borrowersLabel"
+            android:layout_marginRight="23dp"
+            android:text="@string/settings"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 </RelativeLayout>

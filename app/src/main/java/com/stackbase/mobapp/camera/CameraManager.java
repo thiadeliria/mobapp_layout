@@ -8,6 +8,7 @@ import android.graphics.Rect;
 import android.hardware.Camera;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
@@ -120,11 +121,13 @@ public final class CameraManager {
             autoFocusManager.stop();
             autoFocusManager = null;
         }
+        Log.d(TAG, "stopPreview, autoFocusManager stopped");
         if (camera != null && previewing) {
             camera.stopPreview();
             previewCallback.setHandler(null, 0);
             previewing = false;
         }
+        Log.d(TAG, "stopPreview, camera stopPreview");
     }
 
     /**

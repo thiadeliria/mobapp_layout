@@ -8,6 +8,7 @@
         android:centerX="51%"
         android:centerY="50%"
         android:endColor="#b72613"
+        android:gradientRadius="270"
         android:startColor="#b72613"
         android:type="linear" />
 

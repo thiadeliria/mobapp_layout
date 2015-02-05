@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgd_gradient_red"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
     tools:context="com.stackbase.mobapp.activity.ThumbnailsActivity" >
 
     <ImageView
         android:id="@+id/topBanner"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/bgd_gradient_black" />
 
@@ -24,11 +26,13 @@
     <GridView
         android:id="@+id/picturesGridView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/topBanner"
-        android:columnWidth="100dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBanner"
+        android:columnWidth="120dp"
+        android:descendantFocusability="blocksDescendants"
         android:drawSelectorOnTop="true"
         android:gravity="center"
+        android:horizontalSpacing="8dp"
         android:numColumns="auto_fit"
         android:padding="10dp"
         android:stretchMode="columnWidth"
